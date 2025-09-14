@@ -13,8 +13,8 @@ function Layout() {
 
   return user ?  (
     <div className="flex flex-col items-start justify-start h-screen">
-      <nav className="w-full px-8 min-h-14 flex items-center justify-between border-b border-gray-200">
-  <img src={assets.logo} alt="" className="w-48 h-auto" onClick={() => navigate("/")} />
+      <nav className="w-full px-8 min-h-14 flex items-center justify-between border-b border-gray-200 position-fixed">
+  <img src={assets.logo} alt="" className="w-36 h-auto" onClick={() => navigate("/")} />
         {sidebar ? (
           <X
             onClick={() => setSidebar(false)}
