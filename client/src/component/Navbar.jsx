@@ -1,19 +1,35 @@
+
 import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { ArrowRight } from "lucide-react";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
+import React, { useEffect, useState } from "react";
+
 
 function Navbar() {
   const navigator = useNavigate();
   const { user } = useUser();
   const { openSignIn } = useClerk();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="fixed z-5 w-full backdrop-blur-2xl flex justify-between items-center py-3 px-4 sm:px-20 xl:px-32">
+    <div
+      className={`fixed z-50 w-full backdrop-blur-2xl flex justify-between items-center transition-all duration-300 px-4 sm:px-20 xl:px-32 ${
+        scrolled ? "py-1 shadow-md" : "py-4"
+      }`}
+    >
       <img
         src={assets.logo}
         alt="Logo"
-        className="w-32 sm:w-44 cursor-pointer"
+        className={`cursor-pointer transition-all duration-300 ${scrolled ? "w-24 sm:w-32" : "w-32 sm:w-44"}`}
         onClick={() => navigator("/")}
       />
 

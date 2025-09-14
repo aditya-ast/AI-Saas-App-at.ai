@@ -52,13 +52,15 @@ const Testimonials = () => {
 
   return (
     <>
-      <div className="py-24">
-        <h1 className="text-center text-4xl font-bold text-gray-900">
-          Testimonials
-        </h1>
-        <p className="text-center text-gray-500 mt-1">
-          We have collected some testimonials from our users. They are real
-          people who have used our product.
+  <div className="py-24 testimonial-section">
+        <div className="flex flex-col items-center mb-8">
+          <span className="block w-16 h-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-500 mb-4"></span>
+          <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 mb-2 drop-shadow text-center">
+            What Our Users Say
+          </h1>
+        </div>
+        <p className="text-center text-gray-600 text-lg max-w-xl mx-auto mb-4">
+          Real feedback from creators and teams who use our platform every day.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-6 py-20 cursor-pointer">
           {testimonials.map((testimonial, index) => (

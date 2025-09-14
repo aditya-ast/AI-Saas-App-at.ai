@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="flex flex-col items-center justify-around w-full py-12 text-sm bg-slate-50 text-gray-800/80 border-t border-gray-200">
   {/* Logo */}
-  <img src={assets.logo} alt="AI SaaS Logo" className="mb-2 h-10 w-auto" />
+  <img src={assets.logo} alt="AI SaaS Logo" className="mb-2 h-28 w-auto" />
       <p className="mt-2 text-center text-base font-medium">
   Copyright © 2025 <a href="https://aaditya-jadon.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-bold text-indigo-600 hover:underline">Aditya Jadon</a>. All rights reserved.
       </p>
