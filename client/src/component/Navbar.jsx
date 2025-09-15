@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <div
-      className={`fixed z-50 w-full backdrop-blur-2xl flex justify-between items-center transition-all duration-300 px-4 sm:px-20 xl:px-32 ${
+      className={`fixed z-50 w-full backdrop-blur-2xl flex justify-between items-center transition-all duration-300 sm:px-20 xl:px-32 ${
         scrolled ? "py-1 shadow-md" : "py-4"
       }`}
     >
@@ -34,7 +34,7 @@ function Navbar() {
       />
 
       {user ? (
-        <div className="scale-150 my-3">
+        <div className="scale-150 my-3 mr-5">
           <UserButton />
         </div>
       ) : (

@@ -39,17 +39,22 @@ function FeaturesOverview() {
           </p>
         </div>
         <div className="relative flex flex-col items-center mt-16">
-          {/* Timeline vertical line */}
-          <div className="absolute left-1/2 top-0 w-1 h-full bg-gradient-to-b from-blue-200 via-purple-200 to-purple-400 -translate-x-1/2 z-0" />
-          <div className="flex flex-col gap-16 w-full z-10">
+          {/* Timeline vertical line (hidden on mobile) */}
+          <div className="absolute left-1/2 top-0 w-1 h-full bg-gradient-to-b from-blue-200 via-purple-200 to-purple-400 -translate-x-1/2 z-0 hidden sm:block" />
+          <div className="flex flex-col gap-10 w-full z-10">
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className={`relative flex items-center w-full ${idx % 2 === 0 ? 'justify-start' : 'justify-end'} transition-all duration-700 ease-out`}
+                className={
+                  `relative flex w-full transition-all duration-700 ease-out ` +
+                  `sm:items-center ` +
+                  (idx % 2 === 0 ? 'sm:justify-start' : 'sm:justify-end')
+                }
                 style={{ minHeight: '120px' }}
               >
-                <div className={`w-1/2 ${idx % 2 === 0 ? 'pr-8 flex justify-end' : 'pl-8 flex justify-start'}`}>
-                  <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center max-w-xs border border-blue-100">
+                {/* On mobile, stack all steps centered and full width */}
+                <div className="w-full px-0 flex justify-center sm:w-1/2 sm:px-0 " >
+                  <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center max-w-xs border border-blue-100 w-full">
                     <div className="mb-4 animate-bounce-slow">{step.icon}</div>
                     <h3 className="text-lg font-semibold mb-2 text-gray-800 text-center">{step.title}</h3>
                     <p className="text-gray-500 text-center text-sm">{step.description}</p>

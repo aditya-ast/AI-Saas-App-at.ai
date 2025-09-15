@@ -9,6 +9,7 @@ import {
   User,
   Image as ImageIcon,
   LogOut,
+  X,
 } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -30,11 +31,18 @@ function Sidebar({ sidebar, setSidebar }) {
 
   return (
     <div
-      className={`w-60 bg-white border-r border-gray-200 flex flex-col justify-between items-center max-sm:absolute top-14 bottom-0 z-40 ${
-        sidebar ? "translate-x-0" : "max-sm:-translate-x-full"
-      } transition-all duration-300 ease-in-out`}
+      className={`
+        w-60 bg-white border-r border-gray-200 flex flex-col justify-between items-center
+        max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:w-full max-sm:h-full max-sm:z-50
+        ${sidebar ? "translate-x-0" : "max-sm:-translate-x-full"}
+        transition-all duration-300 ease-in-out
+      `}
     >
-      <div className="my-7 w-full">
+      {/* Mobile Close (X) Icon */}
+      <div className="sm:hidden w-full flex justify-end p-4 absolute top-0 right-0 z-50">
+        <X className="w-8 h-8 text-gray-700 cursor-pointer" onClick={() => setSidebar(false)} />
+      </div>
+  <div className="my-7 w-full pt-10 sm:pt-0">
         <img src={user.imageUrl} className="w-13 rounded-full mx-auto" alt="" />
         <h1 className="mt-1 text-center">{user.fullName}</h1>
         <div className="px-6 mt-5 text-sm text-gray-600 font-medium">

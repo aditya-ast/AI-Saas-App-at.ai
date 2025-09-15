@@ -58,7 +58,6 @@ const GenerateImages = () => {
       {/* Header */}
       <div className="w-full max-w-4xl mb-10 text-center">
         <h1 className="text-4xl font-extrabold text-green-700 mb-2 drop-shadow flex items-center justify-center gap-2">
-          <Image className="w-8 text-[#00ad25] animate-pulse" />
           AI Image Generator
         </h1>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto">Describe your vision, pick a style, and let AI create a unique image for you. Share your creation with the world!</p>

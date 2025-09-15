@@ -50,10 +50,9 @@ const RemoveObject = () => {
       {/* Header (like Write Article) */}
       <div className="w-full max-w-4xl mb-10 text-center">
         <h1 className="text-4xl font-extrabold text-blue-700 mb-2 drop-shadow-sm flex items-center justify-center gap-2">
-          <Sparkles className="w-8 text-[#4a7aff] animate-pulse" />
           Remove Object from Image
         </h1>
-        <p className="text-blue-500 text-lg max-w-2xl mx-auto">Remove any single object from your image in seconds. Upload your photo, enter the object name, and let AI do the rest!</p>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto">Remove any single object from your image in seconds. Upload your photo, enter the object name, and let AI do the rest!</p>
       </div>
 
       {/* Stepper Layout */}

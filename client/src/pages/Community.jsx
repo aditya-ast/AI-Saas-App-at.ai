@@ -41,7 +41,6 @@ const Community = () => {
       {/* Header */}
       <div className="w-full max-w-4xl mb-10 text-center">
         <h1 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-1 drop-shadow-sm flex items-center justify-center gap-2">
-          <Users className="w-8 h-8 text-blue-500 bg-white rounded-full p-1 shadow" />
           Community Creations
         </h1>
         <p className="text-gray-500 text-lg max-w-xl mx-auto">See what the community is creating with AI tools!</p>

@@ -42,12 +42,12 @@ const ReviewResume = () => {
   return (
     <div className="min-h-screen bg-white py-10 px-4 flex flex-col items-center">
       {/* Header */}
-      <div className="w-full max-w-4xl mb-10 text-center">
-        <h1 className="text-4xl font-extrabold text-emerald-700 mb-2 drop-shadow-sm flex items-center justify-center gap-2">
-          <Sparkles className="w-8 text-[#00da83] animate-pulse" />
+      <div className="w-full max-w-4xl mb-10 text-left">
+        <h1 className="text-4xl font-extrabold text-emerald-700 mb-2 drop-shadow-sm flex items-center justify-start gap-2">
+          <FileText className="w-8 h-8 text-[#00da83]" />
           Resume Review
         </h1>
-        <p className="text-emerald-500 text-lg max-w-2xl mx-auto">Upload your PDF resume and get instant, AI-powered feedback and analysis to help you stand out!</p>
+        <p className="text-gray-500 text-lg max-w-2xl">Upload your PDF resume and get instant, AI-powered feedback and analysis to help you stand out!</p>
       </div>
 
       {/* Main Content */}

@@ -12,7 +12,7 @@ function AiTools() {
       <div className="text-center mb-10">
         <div className="flex flex-col items-center">
           <span className="block w-16 h-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-500 mb-4"></span>
-          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 mb-2 drop-shadow">
+          <h2 id="ai-tools-header" className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 mb-2 drop-shadow">
             Powerful AI Tools
           </h2>
         </div>

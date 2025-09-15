@@ -53,8 +53,9 @@ const BlogTitles = () => {
   <div className="h-screen w-full bg-white flex flex-col items-center py-10 px-2">
       {/* Header */}
       <div className="w-full max-w-3xl mb-8 text-center">
-        <h1 className="text-4xl font-extrabold text-purple-800 mb-2 drop-shadow flex items-center justify-center gap-2">
-          <Hash className="w-8 text-[#c341f6] animate-pulse" />
+        <p className="text-[#c341f6] text-base font-semibold mb-1">AI-Powered Tool</p>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-purple-800 mb-3 drop-shadow flex items-center justify-center gap-2">
+
           Blog Title Generator
         </h1>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto">Get creative, catchy blog titles instantly. Choose a category, enter your keyword, and let AI inspire your next post!</p>

@@ -42,10 +42,9 @@ const RemoveBackground = () => {
       {/* Header */}
       <div className="w-full max-w-4xl mb-10 text-center">
         <h1 className="text-4xl font-extrabold text-orange-700 mb-2 drop-shadow-sm flex items-center justify-center gap-2">
-          <Sparkles className="w-8 text-[#ff4938] animate-pulse" />
           Remove Image Background
         </h1>
-        <p className="text-orange-500 text-lg max-w-2xl mx-auto">Remove the background from any image instantly. Upload your photo and get a clean, transparent result powered by AI!</p>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto">Remove the background from any image instantly. Upload your photo and get a clean, transparent result powered by AI!</p>
       </div>
 
       {/* Main Content */}

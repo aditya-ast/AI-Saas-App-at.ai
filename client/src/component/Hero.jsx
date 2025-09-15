@@ -6,9 +6,9 @@ import { assets } from "../assets/assets";
 function Hero() {
   const naviagte = useNavigate();
   const handleScrollToFeatures = useCallback(() => {
-    const section = document.getElementById("ai-tools-section");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    const header = document.getElementById("ai-tools-header");
+    if (header) {
+      header.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, []);
 
@@ -27,13 +27,13 @@ function Hero() {
       <div className="flex gap-4 justify-center mt-8">
         <button
           onClick={() => naviagte("/ai")}
-          className="px-8 py-3 rounded-xl font-semibold text-base sm:text-lg bg-gradient-to-r from-blue-600 via-purple-500 to-blue-600 text-white shadow-lg backdrop-blur-md border border-white/30 hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="px-8 py-3 rounded-xl font-semibold text-base sm:text-lg bg-gradient-to-r from-blue-600 via-purple-500 to-blue-600 text-white shadow-lg backdrop-blur-md border border-white/30 hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
         >
           <span className="inline-block drop-shadow">Start Your Journey</span>
         </button>
         <button
           onClick={handleScrollToFeatures}
-          className="px-8 py-3 rounded-xl font-semibold text-base sm:text-lg bg-white/80 text-blue-700 shadow-lg border border-blue-600 hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="px-8 py-3 rounded-xl font-semibold text-base sm:text-lg bg-white/80 text-blue-700 shadow-lg border border-blue-600 hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
         >
           <span className="inline-block drop-shadow">Explore Features</span>
         </button>
